@@ -2126,7 +2126,7 @@
       <a href="/resources" class="view-all">View all guides <span>→</span></a>
     </div>
 
-    <div class="articles-grid" id="articlesGrid"></div>
+    <div class="articles-grid" id="articlesGrid">
       <!-- Article 1 -->
       <a href="/resources/car-broke-down-no-savings" class="article">
         <div class="article-visual">
@@ -2580,47 +2580,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-<script>
-  async function loadHomepageArticles() {
-    const grid = document.getElementById("articlesGrid");
-    if (!grid) return;
 
-    try {
-      const response = await fetch("/articles.json");
-      const articles = await response.json();
-
-      grid.innerHTML = articles.slice(0, 3).map(article => `
-        <a href="/articles/${article.slug}" class="article">
-          <div class="article-visual">
-            <svg class="bg" viewBox="0 0 400 225" preserveAspectRatio="none">
-              <rect width="400" height="225" fill="currentColor" opacity="0.04"></rect>
-              <circle cx="320" cy="40" r="80" fill="currentColor" opacity="0.04"></circle>
-              <circle cx="70" cy="190" r="90" fill="currentColor" opacity="0.04"></circle>
-            </svg>
-            <svg class="art" viewBox="0 0 64 64">
-              <path d="M16 12h24l8 8v32H16z"></path>
-              <path d="M40 12v8h8"></path>
-              <path d="M24 30h16M24 38h16M24 46h10"></path>
-            </svg>
-          </div>
-
-          <div class="article-body">
-            <div class="article-cat">${article.category || "Guide"}</div>
-            <h3 class="article-title">${article.title}</h3>
-            <p class="article-excerpt">${article.excerpt || article.description || ""}</p>
-            <div class="article-meta">
-              <span>${article.readTime || ""}</span>
-              <span class="article-arrow">→</span>
-            </div>
-          </div>
-        </a>
-      `).join("");
-    } catch (error) {
-      grid.innerHTML = "";
-    }
-  }
-
-  loadHomepageArticles();
-</script>
 </body>
 </html>
