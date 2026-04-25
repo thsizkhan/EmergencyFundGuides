@@ -2125,95 +2125,7 @@
       </div>
       <a href="/resources" class="view-all">View all guides <span>→</span></a>
     </div>
-
-    <div class="articles-grid" id="articlesGrid">
-      <!-- Article 1 -->
-      <a href="/resources/car-broke-down-no-savings" class="article">
-        <div class="article-visual">
-          <svg class="bg" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs>
-              <pattern id="p1" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                <line x1="0" y1="0" x2="0" y2="12" stroke="#1f4a38" stroke-width="1" opacity="0.12"/>
-              </pattern>
-            </defs>
-            <rect width="400" height="225" fill="url(#p1)"/>
-          </svg>
-          <svg class="art" viewBox="0 0 160 120">
-            <path d="M20 80V60l8-20h104l8 20v20"/>
-            <path d="M20 80h120v20H20z"/>
-            <circle cx="45" cy="100" r="8"/>
-            <circle cx="115" cy="100" r="8"/>
-            <path d="M40 60h80"/>
-          </svg>
-        </div>
-        <div class="article-body">
-          <div class="article-cat">Car repair</div>
-          <h3 class="article-title">Car broke down with no savings — your exact options in 2026.</h3>
-          <p class="article-excerpt">Your mechanic quoted $1,800. Here's what saying no actually costs you — and the options most people never consider before panicking.</p>
-          <div class="article-meta">
-            <span>6 min read</span>
-            <span class="article-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 2 -->
-      <a href="/resources/medical-bill-cannot-pay" class="article">
-        <div class="article-visual">
-          <svg class="bg" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs>
-              <pattern id="p2" width="16" height="16" patternUnits="userSpaceOnUse">
-                <circle cx="8" cy="8" r="1" fill="#1f4a38" opacity="0.2"/>
-              </pattern>
-            </defs>
-            <rect width="400" height="225" fill="url(#p2)"/>
-          </svg>
-          <svg class="art" viewBox="0 0 160 120">
-            <rect x="30" y="20" width="100" height="90" rx="4"/>
-            <path d="M45 45h70M45 60h70M45 75h50"/>
-            <circle cx="120" cy="85" r="14"/>
-            <path d="M120 78v14M113 85h14"/>
-          </svg>
-        </div>
-        <div class="article-body">
-          <div class="article-cat">Medical bills</div>
-          <h3 class="article-title">Unexpected medical bill you cannot pay — what happens if you ignore it.</h3>
-          <p class="article-excerpt">Medical debt goes to collections in 90 days. Here's what that costs you long-term and the negotiation options most patients never use.</p>
-          <div class="article-meta">
-            <span>8 min read</span>
-            <span class="article-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 3 -->
-      <a href="/resources/behind-on-rent-every-option" class="article">
-        <div class="article-visual">
-          <svg class="bg" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs>
-              <pattern id="p3" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M0 20L20 0" stroke="#1f4a38" stroke-width="1" opacity="0.14"/>
-              </pattern>
-            </defs>
-            <rect width="400" height="225" fill="url(#p3)"/>
-          </svg>
-          <svg class="art" viewBox="0 0 160 120">
-            <path d="M20 60L80 20l60 40"/>
-            <path d="M35 55v55h90V55"/>
-            <path d="M65 110V80h30v30"/>
-          </svg>
-        </div>
-        <div class="article-body">
-          <div class="article-cat">Housing</div>
-          <h3 class="article-title">Behind on rent with no way to catch up — every option available.</h3>
-          <p class="article-excerpt">The true cost of a late rent payment vs. a short-term loan — plus rental assistance programs most tenants don't know exist.</p>
-          <div class="article-meta">
-            <span>7 min read</span>
-            <span class="article-arrow">→</span>
-          </div>
-        </div>
-      </a>
-    </div>
+<div class="articles-grid" id="articlesGrid"></div>
   </div>
 </section>
 
@@ -2579,6 +2491,67 @@ document.addEventListener('DOMContentLoaded', () => {
     io.observe(el);
   });
 });
+</script>
+
+<script>
+  function escapeHtml(value) {
+    return String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  async function loadHomepageArticles() {
+    const grid = document.getElementById("articlesGrid");
+    if (!grid) return;
+
+    try {
+      const response = await fetch("/articles.json");
+      const articles = await response.json();
+
+      grid.innerHTML = articles.slice(0, 3).map((article, index) => {
+        const patternId = `articlePattern${index}`;
+
+        return `
+          <a href="/articles/${escapeHtml(article.slug)}" class="article">
+            <div class="article-visual">
+              <svg class="bg" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <pattern id="${patternId}" width="16" height="16" patternUnits="userSpaceOnUse">
+                    <circle cx="8" cy="8" r="1" fill="#1a3a6e" opacity="0.2"/>
+                  </pattern>
+                </defs>
+                <rect width="400" height="225" fill="url(#${patternId})"/>
+              </svg>
+
+              <svg class="art" viewBox="0 0 160 120">
+                <rect x="34" y="20" width="92" height="88" rx="4"/>
+                <path d="M50 45h60M50 60h60M50 75h42"/>
+                <path d="M50 92h28"/>
+              </svg>
+            </div>
+
+            <div class="article-body">
+              <div class="article-cat">${escapeHtml(article.category || "Guide")}</div>
+              <h3 class="article-title">${escapeHtml(article.title)}</h3>
+              <p class="article-excerpt">${escapeHtml(article.excerpt || article.description || "")}</p>
+              <div class="article-meta">
+                <span>${escapeHtml(article.readTime || "")}</span>
+                <span class="article-arrow">→</span>
+              </div>
+            </div>
+          </a>
+        `;
+      }).join("");
+    } catch (error) {
+      grid.innerHTML = "";
+      console.error("Failed to load articles:", error);
+    }
+  }
+
+  loadHomepageArticles();
 </script>
 
 </body>
