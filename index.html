@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#faf8f3">
+<title>EmergencyFundGuides — See every option before you borrow</title>
+<meta name="description" content="Free tool for Americans facing a financial emergency. Answer 8 questions in 90 seconds and see every option available — assistance programs, loans, advances, negotiation tactics — ranked for your specific situation.">
+<meta property="og:title" content="EmergencyFundGuides — See every option before you borrow">
+<meta property="og:description" content="Free AI analysis for Americans facing a financial emergency. 8 questions, 90 seconds, your real options ranked.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index,follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Schema: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Emergency Financial Analyzer",
+  "url": "https://emergencyfundguides.com",
+  "description": "Free tool that analyzes a user's financial emergency and shows every option available — loans, assistance programs, advances, and negotiation tactics — ranked for their specific profile.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "3214"}
+}
+</script>
+<!-- Schema: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "EmergencyFundGuides",
+  "url": "https://emergencyfundguides.com",
+  "description": "Free financial guidance platform helping Americans navigate financial emergencies.",
+  "sameAs": []
+}
+</script>
+<!-- Schema: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is this really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The analysis tool, the action plan email, and our guides are all free. We are compensated by lending partners when consumers choose to be connected with them — but you are under no obligation to accept any offer."}},
+    {"@type":"Question","name":"Do you do a credit check?","acceptedAnswer":{"@type":"Answer","text":"No. Using our tool does not affect your credit score in any way. We ask you to estimate your credit range, but no credit inquiry is made."}},
+    {"@type":"Question","name":"How fast will I see options?","acceptedAnswer":{"@type":"Answer","text":"Options appear on screen immediately after you finish the 8 questions — roughly 90 seconds. Your full personalized plan is emailed within 30 seconds of submission."}},
+    {"@type":"Question","name":"Are you a lender?","acceptedAnswer":{"@type":"Answer","text":"No. EmergencyFundGuides is not a lender. We are a guidance service that helps you understand every option available, including non-loan options like assistance programs, employer advances, and bill negotiation."}}
+  ]
+}
+</script>
+
+<style>
+  /* =========================================================
+     EMERGENCYFUNDGUIDES — CLEAN AUTHORITY
+     Forest-green accent · Instrument Serif display · Inter Tight body
+  ========================================================= */
+  :root {
+    /* Palette — warm off-white canvas, deep ink, single forest-green accent */
+    --paper:        #faf8f3;         /* canvas */
+    --paper-2:      #f3f0e7;         /* raised surface */
+    --paper-3:      #ebe7da;         /* soft rule */
+    --ink:          #151614;         /* primary text */
+    --ink-2:        #3c3d39;         /* secondary text */
+    --ink-3:        #76766f;         /* tertiary / meta */
+    --ink-4:        #a8a79d;         /* placeholder / quiet */
+    --rule:         #d9d4c4;         /* hairline */
+    --rule-2:       #e4dfd0;
+
+    --accent:       #1a3a6e;         /* deep trust blue */
+    --accent-2:     #2451a0;         /* hover */
+    --accent-soft:  #e4eaf5;         /* wash */
+    --accent-ink:   #0d1f40;         /* darkest */
+
+    --cta:          #d4820a;         /* amber/gold — action */
+    --cta-hover:    #e8950f;
+    --cta-ink:      #7a4a05;
+
+    --warn:         #a0460e;         /* urgent amber-brown (for call button) */
+    --warn-2:       #c2571a;
+    --warn-soft:    #f2e3d0;
+
+    --ring:         rgba(26, 58, 110, 0.22);
+
+    /* Type */
+    --serif:  'Instrument Serif', 'Times New Roman', Georgia, serif;
+    --sans:   'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --mono:   'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+    /* Scale */
+    --container: 1180px;
+    --radius: 4px;
+    --radius-lg: 10px;
+
+    /* Motion */
+    --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  button { font-family: inherit; }
+  ::selection { background: var(--accent); color: var(--paper); }
+
+  /* Shared layout */
+  .wrap { max-width: var(--container); margin: 0 auto; padding: 0 28px; }
+
+  /* Type primitives */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .eyebrow-dot::before {
+    content: '';
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: 2px;
+  }
+  .display {
+    font-family: var(--serif);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+  }
+  .display em { font-style: italic; color: var(--accent); }
+
+  /* =============== HEADER =============== */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250, 248, 243, 0.82);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
+  }
+  .site-header.scrolled {
+    border-bottom-color: var(--rule);
+    background: rgba(250, 248, 243, 0.95);
+  }
+  .nav {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 28px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand-mark {
+    width: 30px; height: 30px;
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--paper);
+    display: grid; place-items: center;
+    font-family: var(--serif);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1;
+    padding-bottom: 2px;
+  }
+  .brand-name {
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .brand-name .amp {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--ink-2);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent);
+    color: var(--paper) !important;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    font-weight: 600 !important;
+    transition: background 0.15s;
+  }
+  .nav-cta:hover { background: var(--accent-2); color: var(--paper) !important; }
+  .nav-cta::after {
+    content: '→';
+    margin-left: 8px;
+    display: inline-block;
+    transition: transform 0.2s var(--ease);
+  }
+  .nav-cta:hover::after { transform: translateX(3px); }
+
+  .hamburger {
+    display: none;
+    width: 44px; height: 44px;
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    cursor: pointer;
+    align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .hamburger svg { width: 20px; height: 20px; stroke: var(--ink); }
+
+  .mobile-menu {
+    display: none;
+    border-top: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 8px 28px 20px;
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu a {
+    display: block;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .mobile-menu a:last-child { border-bottom: none; color: var(--accent); font-weight: 600; }
+
+  /* =============== HERO =============== */
+  .hero {
+    padding: 80px 0 56px;
+    position: relative;
+  }
+  .hero-inner { max-width: var(--container); margin: 0 auto; padding: 0 28px; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    align-items: end;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    padding: 8px 14px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 100px;
+    margin-bottom: 32px;
+  }
+  .hero-badge .pulse {
+    width: 7px; height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: relative;
+  }
+  .hero-badge .pulse::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.35;
+    animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  @keyframes ping {
+    0% { transform: scale(1); opacity: 0.35; }
+    80%, 100% { transform: scale(2.2); opacity: 0; }
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(44px, 7.2vw, 104px);
+    line-height: 0.96;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+  .hero h1 em { color: var(--accent); font-style: italic; }
+  .hero h1 .u {
+    position: relative;
+    white-space: nowrap;
+  }
+  .hero h1 .u::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0.04em;
+    height: 0.12em;
+    background: var(--accent);
+    opacity: 0.18;
+    border-radius: 2px;
+  }
+  .hero-sub {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 560px;
+    margin-bottom: 36px;
+    font-weight: 400;
+  }
+  .hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s var(--ease), background 0.15s, box-shadow 0.2s;
+    border-radius: var(--radius);
+    min-height: 56px;
+    padding: 0 28px;
+    white-space: nowrap;
+    line-height: 1;
+  }
+  .btn-primary {
+    background: var(--cta);
+    color: var(--paper);
+    box-shadow: 0 2px 0 var(--cta-ink), 0 10px 30px -10px rgba(212,130,10,0.4);
+  }
+  .btn-primary:hover {
+    background: var(--cta-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 0 var(--cta-ink), 0 14px 36px -10px rgba(212,130,10,0.5);
+  }
+  .btn-primary:active { transform: translateY(1px); box-shadow: 0 1px 0 var(--cta-ink); }
+  .btn-primary svg { width: 18px; height: 18px; transition: transform 0.2s var(--ease); }
+  .btn-primary:hover svg { transform: translateX(4px); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+  }
+  .btn-ghost:hover { border-color: var(--ink); }
+
+  .btn-warn {
+    background: var(--warn);
+    color: var(--paper);
+    box-shadow: 0 2px 0 #6b2e0a, 0 10px 30px -10px rgba(160,70,14,0.4);
+  }
+  .btn-warn:hover { background: var(--warn-2); transform: translateY(-1px); }
+
+  /* Hero meta column */
+  .hero-meta {
+    border-left: 1px solid var(--rule);
+    padding-left: 32px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 28px;
+  }
+  .hero-stat-line {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .hero-stat-line .n {
+    font-family: var(--serif);
+    font-size: 56px;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .hero-stat-line .n em { color: var(--accent); font-style: italic; }
+  .hero-stat-line .l {
+    font-size: 13.5px;
+    color: var(--ink-3);
+    margin-top: 4px;
+    letter-spacing: 0.005em;
+  }
+  .hero-trust-row {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--ink-3);
+  }
+  .hero-trust-row span { display: inline-flex; align-items: center; gap: 6px; }
+  .hero-trust-row svg { width: 14px; height: 14px; stroke: var(--accent); fill: none; stroke-width: 2; }
+
+  /* =============== SITUATION SELECTOR =============== */
+  .situations {
+    padding: 56px 0 72px;
+    border-top: 1px solid var(--rule);
+  }
+  .situations-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .situations-head h2 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.6vw, 32px);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .situations-head .hint {
+    font-size: 14px;
+    color: var(--ink-3);
+  }
+  .sit-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+  }
+  .sit-card {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    padding: 22px 18px 20px;
+    text-decoration: none;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    min-height: 140px;
+    transition: transform 0.18s var(--ease), border-color 0.18s, background 0.18s;
+    position: relative;
+  }
+  .sit-card:hover {
+    background: var(--paper);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+  }
+  .sit-card:hover .sit-arrow { opacity: 1; transform: translate(2px, -2px); }
+  .sit-icon {
+    width: 36px; height: 36px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .sit-label {
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+  }
+  .sit-arrow {
+    position: absolute;
+    top: 18px; right: 18px;
+    width: 14px; height: 14px;
+    stroke: var(--ink-3);
+    fill: none;
+    stroke-width: 1.8;
+    opacity: 0;
+    transition: opacity 0.18s, transform 0.18s var(--ease);
+  }
+
+  /* =============== HOW IT WORKS =============== */
+  .hiw {
+    padding: 96px 0;
+    background: var(--paper-2);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-head {
+    max-width: 640px;
+    margin-bottom: 56px;
+  }
+  .section-head .eyebrow { margin-bottom: 18px; display: inline-block; }
+  .section-head h2 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  .section-head h2 em { color: var(--accent); font-style: italic; }
+  .section-head p {
+    font-size: 18px;
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+
+  .hiw-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .hiw-card {
+    padding: 40px 32px 36px 0;
+    border-right: 1px solid var(--rule);
+    position: relative;
+  }
+  .hiw-card:last-child { border-right: none; padding-right: 0; }
+  .hiw-card:not(:first-child) { padding-left: 32px; }
+  .hiw-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+  }
+  .hiw-title {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .hiw-desc {
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+  .hiw-time {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  /* =============== CALCULATOR =============== */
+  .calc {
+    padding: 96px 0 112px;
+    position: relative;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% 0%, rgba(26,58,110,0.06), transparent 70%),
+      linear-gradient(180deg, var(--paper) 0%, #f1ede0 22%, #f1ede0 78%, var(--paper) 100%);
+    overflow: hidden;
+  }
+  .calc::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(21,22,20,0.06) 1px, transparent 0);
+    background-size: 28px 28px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .calc-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 28px;
+    position: relative;
+  }
+  .calc-head { text-align: center; margin-bottom: 44px; }
+  .calc-head .eyebrow { margin-bottom: 18px; display: inline-block; }
+  .calc-head h2 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5.2vw, 60px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.018em;
+    margin-bottom: 16px;
+  }
+  .calc-head h2 em { color: var(--accent); font-style: italic; }
+  .calc-head p {
+    font-size: 17px;
+    color: var(--ink-2);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* Progress */
+  .progress-wrap { margin-bottom: 20px; }
+  .progress-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  .progress-labels .step-label {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    font-weight: 500;
+  }
+  .progress-labels .step-percent {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .progress-track {
+    height: 3px;
+    background: var(--paper-3);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.45s var(--ease);
+    width: 0%;
+  }
+
+  /* Calculator card */
+  .calc-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    padding: 44px 44px 36px;
+    position: relative;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.9),
+      0 1px 0 var(--rule-2),
+      0 2px 4px rgba(21,22,20,0.04),
+      0 12px 24px -8px rgba(21,22,20,0.08),
+      0 40px 80px -30px rgba(13,31,64,0.18);
+  }
+  .calc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 24px; right: 24px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent) 30%, var(--cta) 70%, transparent);
+    border-radius: 3px;
+    opacity: 0.9;
+  }
+
+  .calc-step { display: none; animation: stepIn 0.38s var(--ease); }
+  .calc-step.active { display: block; }
+  @keyframes stepIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .q-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .q-num {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .q-meta::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .calc-q {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .calc-hint {
+    font-size: 15px;
+    color: var(--ink-3);
+    margin-bottom: 24px;
+  }
+
+  /* Option rows (single-select) */
+  .opt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .opt {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 18px 20px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s, transform 0.12s var(--ease);
+    color: var(--ink);
+    min-height: 64px;
+    font-family: var(--sans);
+  }
+  .opt:hover {
+    border-color: var(--accent);
+    background: var(--paper);
+  }
+  .opt:hover .opt-check { border-color: var(--accent); }
+  .opt.selected {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+  }
+  .opt.selected .opt-check {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .opt.selected .opt-check svg { opacity: 1; }
+  .opt-icon {
+    width: 38px; height: 38px;
+    stroke: var(--ink-2);
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+    transition: stroke 0.15s;
+  }
+  .opt.selected .opt-icon { stroke: var(--accent); }
+  .opt-text { flex: 1; min-width: 0; }
+  .opt-text strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+  }
+  .opt-text small {
+    display: block;
+    margin-top: 3px;
+    font-size: 13.5px;
+    color: var(--ink-3);
+    font-weight: 400;
+  }
+  .opt-check {
+    width: 22px; height: 22px;
+    border: 1.5px solid var(--rule);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .opt-check svg {
+    width: 12px; height: 12px;
+    stroke: var(--paper);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+
+  /* Multi-select grid (resources) */
+  .opt-grid-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .opt-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 1.35;
+    min-height: 64px;
+  }
+  .opt-grid:hover { border-color: var(--accent); }
+  .opt-grid.selected { background: var(--accent-soft); border-color: var(--accent); }
+  .opt-grid-check {
+    width: 20px; height: 20px;
+    border: 1.5px solid var(--rule);
+    border-radius: 4px;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .opt-grid-check svg {
+    width: 11px; height: 11px;
+    stroke: var(--paper);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0;
+  }
+  .opt-grid.selected .opt-grid-check {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .opt-grid.selected .opt-grid-check svg { opacity: 1; }
+  .opt-grid-icon {
+    width: 24px; height: 24px;
+    stroke: var(--ink-2);
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+    margin-top: -1px;
+  }
+  .opt-grid.selected .opt-grid-icon { stroke: var(--accent); }
+
+  /* State select */
+  .state-select {
+    width: 100%;
+    min-height: 64px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    padding: 18px 54px 18px 20px;
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23151614' stroke-width='1.6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 20px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .state-select:focus, .state-select:hover { border-color: var(--accent); }
+
+  /* Calc nav */
+  .calc-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .btn-back {
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink-2);
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: var(--radius);
+    font-size: 14.5px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .btn-back:hover { border-color: var(--ink); color: var(--ink); }
+  .btn-back-spacer { width: 1px; }
+  .btn-next {
+    background: var(--cta);
+    color: var(--paper);
+    border: none;
+    min-height: 48px;
+    padding: 0 24px;
+    border-radius: var(--radius);
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.15s, transform 0.12s var(--ease);
+  }
+  .btn-next:hover { background: var(--cta-hover); }
+  .btn-next:disabled {
+    background: var(--paper-3);
+    color: var(--ink-4);
+    cursor: not-allowed;
+  }
+  .btn-next svg { width: 14px; height: 14px; transition: transform 0.2s var(--ease); }
+  .btn-next:hover:not(:disabled) svg { transform: translateX(3px); }
+
+  /* Reassurance line on calc */
+  .calc-reassure {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--ink-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .calc-reassure span { display: inline-flex; align-items: center; gap: 6px; }
+  .calc-reassure svg { width: 13px; height: 13px; stroke: var(--accent); fill: none; stroke-width: 2; }
+
+  /* Results */
+  #results-panel { display: none; }
+  .results-summary {
+    padding: 24px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    margin-bottom: 32px;
+  }
+  .results-summary h3 {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 18px;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
+  }
+  .summary-item { display: flex; flex-direction: column; gap: 2px; }
+  .summary-label {
+    font-size: 12px;
+    color: var(--ink-3);
+    letter-spacing: 0.01em;
+  }
+  .summary-value {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+
+  .options-ranked { margin-bottom: 28px; }
+  .options-ranked-head {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .result-option {
+    padding: 22px 24px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .result-option.top {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .result-option.top::before {
+    content: 'Best fit';
+    position: absolute;
+    top: -1px; right: 22px;
+    transform: translateY(-50%);
+    background: var(--accent);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 10px 4px;
+    border-radius: 100px;
+  }
+  .result-opt-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .result-opt-desc {
+    font-size: 14.5px;
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+
+  /* Email capture */
+  .email-capture {
+    margin-top: 32px;
+    padding: 28px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: var(--radius-lg);
+  }
+  .email-capture h3 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .email-capture h3 em { color: #c4d9cd; font-style: italic; }
+  .email-capture > p {
+    font-size: 14px;
+    color: rgba(250, 248, 243, 0.62);
+    line-height: 1.55;
+    margin-bottom: 22px;
+    max-width: 520px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .form-input {
+    width: 100%;
+    min-height: 52px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--paper);
+    outline: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .form-input::placeholder { color: rgba(250, 248, 243, 0.4); }
+  .form-input:focus {
+    border-color: #79a58e;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .tcpa-consent {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin: 16px 0 18px;
+  }
+  .tcpa-consent input[type="checkbox"] {
+    width: 16px; height: 16px;
+    accent-color: #79a58e;
+    margin-top: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .tcpa-text {
+    font-size: 11.5px;
+    color: rgba(250, 248, 243, 0.48);
+    line-height: 1.5;
+  }
+  .tcpa-text a { color: rgba(250, 248, 243, 0.7); text-decoration: underline; }
+  .btn-submit {
+    width: 100%;
+    min-height: 56px;
+    background: var(--cta);
+    color: var(--paper);
+    border: none;
+    border-radius: var(--radius);
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.12s var(--ease), background 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 2px 0 var(--cta-ink);
+  }
+  .btn-submit:hover { transform: translateY(-1px); background: var(--cta-hover); }
+  .btn-submit svg { width: 16px; height: 16px; transition: transform 0.2s var(--ease); }
+  .btn-submit:hover svg { transform: translateX(3px); }
+
+  /* Call button (conditional) */
+  .call-wrap { display: none; margin-top: 14px; }
+  .call-wrap.visible { display: block; }
+  .btn-call {
+    width: 100%;
+    min-height: 56px;
+    background: var(--cta);
+    color: var(--paper);
+    border: none;
+    border-radius: var(--radius);
+    font-family: var(--sans);
+    font-size: 15.5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.15s, transform 0.12s var(--ease);
+    box-shadow: 0 2px 0 var(--cta-ink);
+  }
+  .btn-call:hover { background: var(--cta-hover); transform: translateY(-1px); }
+  .btn-call svg { width: 16px; height: 16px; fill: var(--paper); }
+  .call-dis {
+    text-align: center;
+    font-size: 11.5px;
+    color: rgba(250, 248, 243, 0.42);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  /* Success state */
+  #success-panel { display: none; text-align: center; padding: 32px 16px; }
+  .success-icon {
+    width: 76px; height: 76px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    display: grid; place-items: center;
+    margin: 0 auto 24px;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .success-icon svg { width: 36px; height: 36px; stroke: var(--accent); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  @keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  .success-title {
+    font-family: var(--serif);
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+  .success-sub {
+    font-size: 16px;
+    color: var(--ink-2);
+    max-width: 440px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  /* =============== STATS STRIP =============== */
+  .stats {
+    padding: 72px 0;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .stats-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .stat {
+    padding: 0 24px;
+    border-right: 1px solid rgba(250, 248, 243, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .stat:first-child { padding-left: 0; }
+  .stat:last-child { border-right: none; padding-right: 0; }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: clamp(48px, 6vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--paper);
+  }
+  .stat-num em { color: #9bc0ad; font-style: italic; }
+  .stat-lbl {
+    font-size: 14px;
+    color: rgba(250, 248, 243, 0.6);
+    line-height: 1.45;
+    max-width: 200px;
+  }
+
+  /* =============== ARTICLES =============== */
+  .articles { padding: 104px 0; }
+  .articles-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+  .articles-head .section-head { margin-bottom: 0; }
+  .view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--accent);
+    transition: gap 0.2s var(--ease);
+  }
+  .view-all:hover { gap: 14px; }
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .article {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s var(--ease), border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+  .article:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px -20px rgba(21,22,20,0.18);
+  }
+  .article-visual {
+    aspect-ratio: 16/9;
+    background: var(--paper-2);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    place-items: center;
+  }
+  .article-visual svg.bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+  .article-visual svg.art {
+    width: 40%; height: auto;
+    stroke: var(--accent);
+    stroke-width: 1.2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    position: relative;
+    z-index: 1;
+  }
+  .article-body { padding: 24px 24px 28px; flex: 1; display: flex; flex-direction: column; }
+  .article-cat {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .article-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .article-excerpt {
+    font-size: 14.5px;
+    color: var(--ink-2);
+    line-height: 1.55;
+    margin-bottom: 20px;
+    flex: 1;
+  }
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-size: 12.5px;
+    color: var(--ink-3);
+  }
+  .article-arrow {
+    color: var(--accent);
+    font-size: 16px;
+    transition: transform 0.2s var(--ease);
+  }
+  .article:hover .article-arrow { transform: translateX(4px); }
+
+  /* =============== CTA BANNER =============== */
+  .cta-banner {
+    background: var(--accent);
+    color: var(--paper);
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-banner-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 28px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-banner h2 {
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .cta-banner h2 em { font-style: italic; color: #d9e6dd; }
+  .cta-banner p {
+    font-size: 18px;
+    color: rgba(250, 248, 243, 0.82);
+    margin-bottom: 36px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-on-accent {
+    background: var(--paper);
+    color: var(--accent);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.15);
+  }
+  .btn-on-accent:hover { background: #fff; color: var(--accent-ink); }
+
+  /* =============== FOOTER =============== */
+  .site-footer {
+    background: var(--paper-2);
+    padding: 80px 0 36px;
+    border-top: 1px solid var(--rule);
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 32px;
+  }
+  .footer-brand p {
+    font-size: 14px;
+    color: var(--ink-3);
+    line-height: 1.6;
+    margin-top: 16px;
+    max-width: 280px;
+  }
+  .footer-col h4 {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-col a {
+    font-size: 14.5px;
+    color: var(--ink-2);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-col a:hover { color: var(--accent); }
+  .footer-legal-block {
+    padding: 24px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    margin-bottom: 24px;
+  }
+  .footer-legal-block .lbl {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .footer-legal-block p {
+    font-size: 12.5px;
+    color: var(--ink-3);
+    line-height: 1.65;
+  }
+  .footer-legal-block a { color: var(--ink-2); text-decoration: underline; }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 12.5px;
+    color: var(--ink-3);
+  }
+
+  /* =============== RESPONSIVE =============== */
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-meta { border-left: none; border-top: 1px solid var(--rule); padding: 28px 0 0; }
+    .sit-grid { grid-template-columns: repeat(3, 1fr); }
+    .hiw-grid { grid-template-columns: 1fr; }
+    .hiw-card { border-right: none; border-bottom: 1px solid var(--rule); padding: 28px 0; }
+    .hiw-card:first-child { padding-top: 12px; }
+    .hiw-card:last-child { border-bottom: none; padding-bottom: 0; }
+    .hiw-card:not(:first-child) { padding-left: 0; }
+    .articles-grid { grid-template-columns: 1fr; gap: 16px; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px 32px; }
+  }
+
+  @media (max-width: 760px) {
+    .nav-links { display: none; }
+    .hamburger { display: inline-flex; }
+    .hero { padding: 48px 0 40px; }
+    .hero h1 { font-size: clamp(42px, 10vw, 64px); }
+    .hero-sub { font-size: 17px; }
+    .hero-stat-line .n { font-size: 42px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 32px 0; }
+    .stat { padding: 0 16px; }
+    .stat:nth-child(2) { border-right: none; padding-right: 0; }
+    .stat:nth-child(3) { padding-left: 0; border-right: 1px solid rgba(250,248,243,0.12); }
+    .stat:nth-child(3), .stat:nth-child(4) { padding-top: 16px; border-top: 1px solid rgba(250,248,243,0.12); }
+    .calc { padding: 64px 0 72px; }
+    .calc-card { padding: 28px 20px 24px; border-radius: var(--radius-lg); }
+    .calc-q { font-size: 26px; }
+    .opt-grid-wrap { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .articles { padding: 72px 0; }
+    .hiw { padding: 64px 0; }
+    .cta-banner { padding: 72px 0; }
+    .footer-top { grid-template-columns: 1fr; gap: 36px; }
+    .summary-grid { grid-template-columns: 1fr; }
+    .sit-card { min-height: 120px; padding: 18px 16px; }
+    .sit-icon { width: 30px; height: 30px; }
+  }
+
+  @media (max-width: 480px) {
+    .sit-grid { grid-template-columns: repeat(2, 1fr); }
+    .wrap, .hero-inner, .calc-container { padding: 0 20px; }
+    .nav { padding: 0 20px; }
+    .calc-nav { flex-direction: column-reverse; gap: 10px; align-items: stretch; }
+    .calc-nav .btn-back, .calc-nav .btn-next { width: 100%; }
+    .result-option.top::before { top: 12px; right: 14px; transform: none; }
+  }
+
+  /* Focus states (a11y) */
+  a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: var(--radius);
+  }
+  .opt:focus-visible, .opt-grid:focus-visible { outline-offset: 3px; }
+
+  /* Intersection observer reveals */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+
+<template id="__bundler_thumbnail" data-bg-color="#faf8f3">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#faf8f3"/>
+    <rect x="140" y="360" width="40" height="40" rx="8" fill="#1f4a38"/>
+    <text x="200" y="395" font-family="Georgia, serif" font-size="38" fill="#151614">EmergencyFund·Guides</text>
+    <text x="140" y="480" font-family="Georgia, serif" font-size="96" fill="#151614">See every option</text>
+    <text x="140" y="560" font-family="Georgia, serif" font-size="96" fill="#1f4a38" font-style="italic">before you borrow.</text>
+    <rect x="140" y="620" width="260" height="56" rx="4" fill="#1f4a38"/>
+    <text x="172" y="656" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#faf8f3">Start free analysis →</text>
+  </svg>
+</template>
+<body>
+
+<!-- ======================== HEADER ======================== -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav" aria-label="Primary">
+    <a href="/" class="brand" aria-label="EmergencyFundGuides home">
+      <span class="brand-mark" aria-hidden="true">e</span>
+      <span class="brand-name">EmergencyFund<span class="amp">·</span>Guides</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#resources">Guides</a></li>
+      <li><a href="#calculator">Get help</a></li>
+      <li><a href="#calculator" class="nav-cta">Start free analysis</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" id="hamburger">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#how-it-works" onclick="toggleMenu()">How it works</a>
+    <a href="#resources" onclick="toggleMenu()">Guides</a>
+    <a href="#calculator" onclick="toggleMenu()">Get help</a>
+    <a href="#calculator" onclick="toggleMenu()">Start free analysis →</a>
+  </div>
+</header>
+
+<!-- ======================== HERO ======================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span class="pulse" aria-hidden="true"></span> Free · 90-second analysis</div>
+        <h1>
+          See <em>every option</em><br>
+          before you <span class="u">borrow</span>.
+        </h1>
+        <p class="hero-sub">
+          A free tool for Americans facing a financial emergency. Answer 8 quick questions — we'll show every option available for <em>your</em> situation, ranked by what actually makes sense. No credit check.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#calculator" class="btn btn-primary">
+            Start free analysis
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#how-it-works" class="btn btn-ghost">How it works</a>
+        </div>
+      </div>
+
+      <aside class="hero-meta" aria-label="Site at a glance">
+        <div class="hero-stat-line">
+          <div class="n"><em>47,832</em></div>
+          <div class="l">Americans helped through an emergency</div>
+        </div>
+        <div class="hero-stat-line">
+          <div class="n">$0</div>
+          <div class="l">Cost to use this tool — always free</div>
+        </div>
+        <div class="hero-trust-row">
+          <span><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg> Private</span>
+          <span><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/></svg> No credit check</span>
+          <span><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12l5 5L20 6"/></svg> SSL encrypted</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== SITUATION SELECTOR ======================== -->
+<section class="situations">
+  <div class="wrap">
+    <div class="situations-head">
+      <h2>What are you dealing with right now?</h2>
+      <span class="hint">Tap one to start →</span>
+    </div>
+    <div class="sit-grid" role="list">
+      <a href="#calculator" class="sit-card" role="listitem" onclick="preselectSituation('car')">
+        <svg class="sit-icon" viewBox="0 0 32 32"><path d="M5 20v-4l2-6h18l2 6v4"/><path d="M5 20h22v5H5z"/><circle cx="10" cy="25" r="2"/><circle cx="22" cy="25" r="2"/></svg>
+        <span class="sit-label">Car repair<br>emergency</span>
+        <svg class="sit-arrow" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+      </a>
+      <a href="#calculator" class="sit-card" role="listitem" onclick="preselectSituation('medical')">
+        <svg class="sit-icon" viewBox="0 0 32 32"><rect x="6" y="9" width="20" height="18" rx="2"/><path d="M11 9V6a2 2 0 012-2h6a2 2 0 012 2v3"/><path d="M16 14v8M12 18h8"/></svg>
+        <span class="sit-label">Medical bill<br>you can't pay</span>
+        <svg class="sit-arrow" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+      </a>
+      <a href="#calculator" class="sit-card" role="listitem" onclick="preselectSituation('rent')">
+        <svg class="sit-icon" viewBox="0 0 32 32"><path d="M4 14L16 5l12 9"/><path d="M7 13v14h18V13"/><path d="M13 27v-7h6v7"/></svg>
+        <span class="sit-label">Behind on<br>rent or mortgage</span>
+        <svg class="sit-arrow" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+      </a>
+      <a href="#calculator" class="sit-card" role="listitem" onclick="preselectSituation('utility')">
+        <svg class="sit-icon" viewBox="0 0 32 32"><path d="M18 4L8 18h6l-2 10 10-14h-6l2-10z"/></svg>
+        <span class="sit-label">Utility<br>shutoff notice</span>
+        <svg class="sit-arrow" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+      </a>
+      <a href="#calculator" class="sit-card" role="listitem" onclick="preselectSituation('job')">
+        <svg class="sit-icon" viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="16" rx="2"/><path d="M11 10V7a2 2 0 012-2h6a2 2 0 012 2v3"/><path d="M4 16h24"/></svg>
+        <span class="sit-label">Lost income<br>recently</span>
+        <svg class="sit-arrow" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+      </a>
+      <a href="#calculator" class="sit-card" role="listitem" onclick="preselectSituation('other')">
+        <svg class="sit-icon" viewBox="0 0 32 32"><rect x="6" y="4" width="20" height="24" rx="2"/><path d="M11 10h10M11 15h10M11 20h6"/></svg>
+        <span class="sit-label">Something<br>else</span>
+        <svg class="sit-arrow" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== HOW IT WORKS ======================== -->
+<section class="hiw" id="how-it-works">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow eyebrow-dot">How it works</span>
+      <h2>Clarity first, <em>then</em> a decision you can defend.</h2>
+      <p>We are not a lender. We don't push a product. We help you understand every option available for your specific situation — then connect you with the right solution if you want one.</p>
+    </div>
+
+    <div class="hiw-grid">
+      <div class="hiw-card reveal">
+        <div class="hiw-num">Step 01</div>
+        <h3 class="hiw-title">Tell us what happened.</h3>
+        <p class="hiw-desc">Eight questions about the emergency, your income, your credit range, and what you already have. No Social Security number. No document uploads.</p>
+        <span class="hiw-time">— 90 seconds</span>
+      </div>
+      <div class="hiw-card reveal">
+        <div class="hiw-num">Step 02</div>
+        <h3 class="hiw-title">See every real option.</h3>
+        <p class="hiw-desc">Instant ranked list: loans you'd actually qualify for, employer advances, assistance programs, credit negotiation, and non-loan paths most people miss.</p>
+        <span class="hiw-time">— Instant</span>
+      </div>
+      <div class="hiw-card reveal">
+        <div class="hiw-num">Step 03</div>
+        <h3 class="hiw-title">Get your written plan.</h3>
+        <p class="hiw-desc">A full personalized action plan emailed to you — step-by-step, with state-specific programs, scripts for calling creditors, and links to every resource.</p>
+        <span class="hiw-time">— Sent in 30 seconds</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CALCULATOR ======================== -->
+<section class="calc" id="calculator">
+  <div class="calc-container">
+    <div class="calc-head">
+      <span class="eyebrow eyebrow-dot">Free analysis</span>
+      <h2>What are your <em>real</em> options?</h2>
+      <p>Eight questions. Ninety seconds. Your personalized emergency action plan.</p>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-labels">
+        <span class="step-label" id="stepLabel">Step 1 of 8</span>
+        <span class="step-percent" id="stepPercent">0% complete</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <!-- Calculator Card -->
+    <div class="calc-card" id="calcCard">
+
+      <!-- STEP 1: Situation -->
+      <div class="calc-step active" data-step="1">
+        <div class="q-meta"><span class="q-num">Question 1</span></div>
+        <div class="calc-q">What brought you here today?</div>
+        <div class="calc-hint">Choose the option that best describes your situation.</div>
+        <div class="opt-list">
+          <button class="opt" onclick="selectOpt(this, 1, 'car_repair')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M5 20v-4l2-6h18l2 6v4"/><path d="M5 20h22v5H5z"/><circle cx="10" cy="25" r="2"/><circle cx="22" cy="25" r="2"/></svg>
+            <span class="opt-text"><strong>Car repair emergency</strong><small>Vehicle breakdown, mechanic bill, towing</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 1, 'medical')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="6" y="9" width="20" height="18" rx="2"/><path d="M11 9V6a2 2 0 012-2h6a2 2 0 012 2v3"/><path d="M16 14v8M12 18h8"/></svg>
+            <span class="opt-text"><strong>Medical or dental bill</strong><small>Unexpected health expense</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 1, 'rent')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M4 14L16 5l12 9"/><path d="M7 13v14h18V13"/><path d="M13 27v-7h6v7"/></svg>
+            <span class="opt-text"><strong>Behind on rent or mortgage</strong><small>Risk of late fees or eviction</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 1, 'utility')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M18 4L8 18h6l-2 10 10-14h-6l2-10z"/></svg>
+            <span class="opt-text"><strong>Utility about to be shut off</strong><small>Electric, gas, or water shutoff notice</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 1, 'income_loss')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="16" rx="2"/><path d="M11 10V7a2 2 0 012-2h6a2 2 0 012 2v3"/><path d="M4 16h24"/></svg>
+            <span class="opt-text"><strong>Lost income recently</strong><small>Job loss, hours cut, gig work dried up</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 1, 'multiple')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="6" y="4" width="20" height="24" rx="2"/><path d="M11 10h10M11 15h10M11 20h6"/></svg>
+            <span class="opt-text"><strong>Multiple things at once</strong><small>More than one financial pressure</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+        </div>
+        <div class="calc-nav">
+          <div class="btn-back-spacer"></div>
+          <button class="btn-next" id="next1" disabled onclick="goToStep(2)">Continue
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Urgency -->
+      <div class="calc-step" data-step="2">
+        <div class="q-meta"><span class="q-num">Question 2</span></div>
+        <div class="calc-q">How soon do you need to resolve this?</div>
+        <div class="calc-hint">This narrows down the options that work on your timeline.</div>
+        <div class="opt-list">
+          <button class="opt" onclick="selectOpt(this, 2, 'today')">
+            <svg class="opt-icon" viewBox="0 0 32 32" style="stroke:#a0460e"><circle cx="16" cy="16" r="11"/><path d="M16 10v7l4 3"/></svg>
+            <span class="opt-text"><strong>Today or tomorrow</strong><small>Critical — I need a solution immediately</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 2, 'this_week')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="2"/><path d="M10 5v4M22 5v4M5 13h22"/></svg>
+            <span class="opt-text"><strong>Within the next week</strong><small>Urgent but I have a few days</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 2, 'this_month')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="2"/><path d="M10 5v4M22 5v4M5 13h22"/><circle cx="12" cy="20" r="1.5" fill="currentColor"/></svg>
+            <span class="opt-text"><strong>Within the next month</strong><small>I have some time to explore options</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 2, 'planning')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M16 4v24M4 16h24"/><circle cx="16" cy="16" r="12"/></svg>
+            <span class="opt-text"><strong>Just planning ahead</strong><small>Building an emergency fund strategy</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+        </div>
+        <div class="calc-nav">
+          <button class="btn-back" onclick="goToStep(1)">← Back</button>
+          <button class="btn-next" id="next2" disabled onclick="goToStep(3)">Continue
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Amount -->
+      <div class="calc-step" data-step="3">
+        <div class="q-meta"><span class="q-num">Question 3</span></div>
+        <div class="calc-q">How much do you need?</div>
+        <div class="calc-hint">An approximate range is fine — we use this to match loan types.</div>
+        <div class="opt-list">
+          <button class="opt" onclick="selectOpt(this, 3, 'under_500')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="14" rx="2"/><circle cx="16" cy="17" r="3"/></svg>
+            <span class="opt-text"><strong>Under $500</strong><small>Small emergency or bill gap</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 3, '500_1500')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="14" rx="2"/><circle cx="16" cy="17" r="3"/></svg>
+            <span class="opt-text"><strong>$500 — $1,500</strong><small>Common for car repair or medical copays</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 3, '1500_3500')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="14" rx="2"/><circle cx="16" cy="17" r="3"/></svg>
+            <span class="opt-text"><strong>$1,500 — $3,500</strong><small>Mid-range emergency</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 3, '3500_7500')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="14" rx="2"/><circle cx="16" cy="17" r="3"/></svg>
+            <span class="opt-text"><strong>$3,500 — $7,500</strong><small>Larger expense or multiple bills</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 3, '7500_15000')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="14" rx="2"/><circle cx="16" cy="17" r="3"/></svg>
+            <span class="opt-text"><strong>$7,500 — $15,000</strong><small>Significant financial gap</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 3, 'over_15000')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="14" rx="2"/><circle cx="16" cy="17" r="3"/></svg>
+            <span class="opt-text"><strong>Over $15,000</strong><small>Major emergency or debt consolidation</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+        </div>
+        <div class="calc-nav">
+          <button class="btn-back" onclick="goToStep(2)">← Back</button>
+          <button class="btn-next" id="next3" disabled onclick="goToStep(4)">Continue
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 4: Income -->
+      <div class="calc-step" data-step="4">
+        <div class="q-meta"><span class="q-num">Question 4</span></div>
+        <div class="calc-q">What's your monthly take-home pay?</div>
+        <div class="calc-hint">All income sources — job, gig work, benefits. After taxes.</div>
+        <div class="opt-list">
+          <button class="opt" onclick="selectOpt(this, 4, 'under_1500')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M4 24L12 16l6 6 10-12"/><path d="M22 10h6v6"/></svg>
+            <span class="opt-text"><strong>Under $1,500 / month</strong></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 4, '1500_2500')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M4 24L12 16l6 6 10-12"/><path d="M22 10h6v6"/></svg>
+            <span class="opt-text"><strong>$1,500 — $2,500 / month</strong></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 4, '2500_4000')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M4 24L12 16l6 6 10-12"/><path d="M22 10h6v6"/></svg>
+            <span class="opt-text"><strong>$2,500 — $4,000 / month</strong></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 4, '4000_6000')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M4 24L12 16l6 6 10-12"/><path d="M22 10h6v6"/></svg>
+            <span class="opt-text"><strong>$4,000 — $6,000 / month</strong></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 4, 'over_6000')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M4 24L12 16l6 6 10-12"/><path d="M22 10h6v6"/></svg>
+            <span class="opt-text"><strong>Over $6,000 / month</strong></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+        </div>
+        <div class="calc-nav">
+          <button class="btn-back" onclick="goToStep(3)">← Back</button>
+          <button class="btn-next" id="next4" disabled onclick="goToStep(5)">Continue
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 5: Credit -->
+      <div class="calc-step" data-step="5">
+        <div class="q-meta"><span class="q-num">Question 5</span></div>
+        <div class="calc-q">How would you describe your credit?</div>
+        <div class="calc-hint">Approximate is fine — you don't need your exact score.</div>
+        <div class="opt-list">
+          <button class="opt" onclick="selectOpt(this, 5, 'good')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M16 4l3.5 8 8.5 1-6.5 6 2 9L16 23l-7.5 5 2-9-6.5-6 8.5-1z"/></svg>
+            <span class="opt-text"><strong>Good — approved for credit recently</strong><small>Around 680 or higher</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 5, 'fair')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M16 4l3.5 8 8.5 1-6.5 6 2 9L16 23l-7.5 5 2-9-6.5-6 8.5-1z"/></svg>
+            <span class="opt-text"><strong>Fair — some issues, working on it</strong><small>Around 580 – 679</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 5, 'difficult')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M16 4l3.5 8 8.5 1-6.5 6 2 9L16 23l-7.5 5 2-9-6.5-6 8.5-1z"/></svg>
+            <span class="opt-text"><strong>Difficult — late payments or collections</strong><small>Below 580</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 5, 'none')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M11 16h10"/></svg>
+            <span class="opt-text"><strong>No credit history</strong><small>Never had a loan or credit card</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 5, 'unsure')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M13 12a3 3 0 016 0c0 3-3 3-3 5M16 22v1"/></svg>
+            <span class="opt-text"><strong>Not sure</strong><small>I haven't checked recently</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+        </div>
+        <div class="calc-nav">
+          <button class="btn-back" onclick="goToStep(4)">← Back</button>
+          <button class="btn-next" id="next5" disabled onclick="goToStep(6)">Continue
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 6: Resources -->
+      <div class="calc-step" data-step="6">
+        <div class="q-meta"><span class="q-num">Question 6</span></div>
+        <div class="calc-q">What do you currently have?</div>
+        <div class="calc-hint">Select all that apply — this reveals options you might not know about.</div>
+        <div class="opt-grid-wrap">
+          <button class="opt-grid" onclick="toggleMulti(this, 6, 'checking')">
+            <span class="opt-grid-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+            <svg class="opt-grid-icon" viewBox="0 0 32 32"><rect x="4" y="11" width="24" height="14" rx="2"/><path d="M4 15h24"/></svg>
+            <span>Checking account open 3+ months</span>
+          </button>
+          <button class="opt-grid" onclick="toggleMulti(this, 6, 'credit_card')">
+            <span class="opt-grid-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+            <svg class="opt-grid-icon" viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="16" rx="2"/><path d="M4 13h24M8 19h6"/></svg>
+            <span>Credit card with available balance</span>
+          </button>
+          <button class="opt-grid" onclick="toggleMulti(this, 6, 'employer')">
+            <span class="opt-grid-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+            <svg class="opt-grid-icon" viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="16" rx="2"/><path d="M11 10V7a2 2 0 012-2h6a2 2 0 012 2v3"/></svg>
+            <span>Regular employer (not self-employed)</span>
+          </button>
+          <button class="opt-grid" onclick="toggleMulti(this, 6, 'paycheck')">
+            <span class="opt-grid-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+            <svg class="opt-grid-icon" viewBox="0 0 32 32"><rect x="6" y="5" width="20" height="22" rx="2"/><path d="M10 11h12M10 15h12M10 19h8"/></svg>
+            <span>Received paycheck in last 30 days</span>
+          </button>
+          <button class="opt-grid" onclick="toggleMulti(this, 6, 'car')">
+            <span class="opt-grid-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+            <svg class="opt-grid-icon" viewBox="0 0 32 32"><path d="M5 20v-4l2-6h18l2 6v4"/><path d="M5 20h22v5H5z"/><circle cx="10" cy="25" r="2"/><circle cx="22" cy="25" r="2"/></svg>
+            <span>Own a car outright (no loan)</span>
+          </button>
+          <button class="opt-grid" onclick="toggleMulti(this, 6, 'home')">
+            <span class="opt-grid-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+            <svg class="opt-grid-icon" viewBox="0 0 32 32"><path d="M4 14L16 5l12 9"/><path d="M7 13v14h18V13"/></svg>
+            <span>Own a home (even with mortgage)</span>
+          </button>
+        </div>
+        <div class="calc-nav">
+          <button class="btn-back" onclick="goToStep(5)">← Back</button>
+          <button class="btn-next" onclick="goToStep(7)">Continue
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 7: Employment -->
+      <div class="calc-step" data-step="7">
+        <div class="q-meta"><span class="q-num">Question 7</span></div>
+        <div class="calc-q">What's your employment situation?</div>
+        <div class="calc-hint">One of the most important factors lenders consider.</div>
+        <div class="opt-list">
+          <button class="opt" onclick="selectOpt(this, 7, 'fulltime')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="16" rx="2"/><path d="M11 10V7a2 2 0 012-2h6a2 2 0 012 2v3"/></svg>
+            <span class="opt-text"><strong>Full-time employed</strong><small>Regular paycheck, W-2</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 7, 'parttime')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M16 9v7h6"/></svg>
+            <span class="opt-text"><strong>Part-time employed</strong><small>Regular employer, fewer hours</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 7, 'selfemployed')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="18" rx="2"/><path d="M4 14h24M12 20h8"/></svg>
+            <span class="opt-text"><strong>Self-employed or freelance</strong><small>Independent contractor, business owner</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 7, 'gig')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M5 20v-4l2-6h18l2 6v4"/><path d="M5 20h22v5H5z"/><circle cx="10" cy="25" r="2"/><circle cx="22" cy="25" r="2"/></svg>
+            <span class="opt-text"><strong>Gig work</strong><small>Uber, DoorDash, Instacart, and others</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 7, 'benefits')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><path d="M4 26V14l12-8 12 8v12"/><path d="M4 26h24M10 26v-6h12v6"/></svg>
+            <span class="opt-text"><strong>Receiving benefits</strong><small>Social Security, disability, pension</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+          <button class="opt" onclick="selectOpt(this, 7, 'between_jobs')">
+            <svg class="opt-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M12 12l8 8M20 12l-8 8"/></svg>
+            <span class="opt-text"><strong>Between jobs</strong><small>Currently looking for work</small></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+          </button>
+        </div>
+        <div class="calc-nav">
+          <button class="btn-back" onclick="goToStep(6)">← Back</button>
+          <button class="btn-next" id="next7" disabled onclick="goToStep(8)">Continue
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 8: State -->
+      <div class="calc-step" data-step="8">
+        <div class="q-meta"><span class="q-num">Question 8 · Final</span></div>
+        <div class="calc-q">What state are you in?</div>
+        <div class="calc-hint">Lending laws and assistance programs vary significantly by state.</div>
+        <select class="state-select" id="stateSelect" onchange="selectState(this.value)" aria-label="State">
+          <option value="">— Select your state —</option>
+          <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+          <option>Arkansas</option><option>California</option><option>Colorado</option>
+          <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+          <option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+          <option>Illinois</option><option>Indiana</option><option>Iowa</option>
+          <option>Kansas</option><option>Kentucky</option><option>Louisiana</option>
+          <option>Maine</option><option>Maryland</option><option>Massachusetts</option>
+          <option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+          <option>Missouri</option><option>Montana</option><option>Nebraska</option>
+          <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
+          <option>New Mexico</option><option>New York</option><option>North Carolina</option>
+          <option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+          <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+          <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
+          <option>Texas</option><option>Utah</option><option>Vermont</option>
+          <option>Virginia</option><option>Washington</option><option>West Virginia</option>
+          <option>Wisconsin</option><option>Wyoming</option>
+        </select>
+        <div class="calc-nav">
+          <button class="btn-back" onclick="goToStep(7)">← Back</button>
+          <button class="btn-next" id="next8" disabled onclick="showResults()">See my options
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- RESULTS PANEL -->
+      <div id="results-panel">
+        <div class="results-summary">
+          <h3>Your profile summary</h3>
+          <div class="summary-grid" id="summaryGrid"></div>
+        </div>
+
+        <div class="options-ranked">
+          <div class="options-ranked-head">Your options, ranked for <em>your</em> situation.</div>
+          <div id="rankedOptions"></div>
+        </div>
+
+        <div class="email-capture">
+          <h3>Get your full <em>personalized</em> action plan.</h3>
+          <p>Step-by-step instructions for each option, state-specific resources, and scripts for calling lenders or creditors — emailed to you in under 30 seconds.</p>
+          <div class="form-row">
+            <input class="form-input" type="text" id="firstName" placeholder="First name" autocomplete="given-name">
+            <input class="form-input" type="email" id="emailInput" placeholder="Email address" autocomplete="email" required>
+          </div>
+          <input class="form-input" type="tel" id="phoneInput" placeholder="Phone (optional — unlocks faster options)" autocomplete="tel">
+          <div class="tcpa-consent">
+            <input type="checkbox" id="tcpaCheck" onchange="checkSubmit()">
+            <label class="tcpa-text" for="tcpaCheck">
+              By submitting, I agree to receive my free emergency action plan and related financial guidance by email. I understand that EmergencyFundGuides and its financial partners may contact me regarding loan options. I may opt out at any time. <a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms</a>
+            </label>
+          </div>
+          <button class="btn-submit" id="submitBtn" onclick="submitLead()">
+            Send my free action plan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+
+          <div class="call-wrap" id="callButtonWrap">
+            <a href="tel:+18005551234" class="btn-call" onclick="trackCall()">
+              <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.4-1.2-.6-2.4-.6-3.6 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-.9-1-.9z"/></svg>
+              Speak with a loan specialist now — free
+            </a>
+            <div class="call-dis">Free service. No obligation. Mon–Fri, 8am–9pm EST. By calling you agree to be connected with a licensed loan specialist.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUCCESS PANEL -->
+      <div id="success-panel">
+        <div class="success-icon"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></div>
+        <div class="success-title">Your plan is <em>on its way.</em></div>
+        <p class="success-sub">Check your inbox in the next 30 seconds for your personalized emergency action plan. If you don't see it, check your spam folder.</p>
+      </div>
+
+    </div><!-- /calc-card -->
+
+    <div class="calc-reassure">
+      <span><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg> Your answers are private</span>
+      <span><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12l5 5L20 6"/></svg> No credit check</span>
+      <span><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/></svg> 100% free</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== STATS ======================== -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-num"><em>47K+</em></div>
+      <div class="stat-lbl">Americans helped through an emergency</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">90<span style="font-size:0.5em;color:rgba(250,248,243,0.5)">s</span></div>
+      <div class="stat-lbl">Average time to see your options</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">$50K</div>
+      <div class="stat-lbl">Maximum loan options surfaced</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><em>100%</em></div>
+      <div class="stat-lbl">Free — no cost to use this tool</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== ARTICLES ======================== -->
+<section class="articles" id="resources">
+  <div class="wrap">
+    <div class="articles-head">
+      <div class="section-head" style="max-width: 560px;">
+        <span class="eyebrow eyebrow-dot">Guides</span>
+        <h2>Plain-English answers for real emergencies.</h2>
+        <p>Not generic advice. Every guide is written for someone with a specific bill, a specific deadline, and limited options.</p>
+      </div>
+      <a href="/resources" class="view-all">View all guides <span>→</span></a>
+    </div>
+
+    <div class="articles-grid">
+      <!-- Article 1 -->
+      <a href="/resources/car-broke-down-no-savings" class="article">
+        <div class="article-visual">
+          <svg class="bg" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <pattern id="p1" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="12" stroke="#1f4a38" stroke-width="1" opacity="0.12"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="225" fill="url(#p1)"/>
+          </svg>
+          <svg class="art" viewBox="0 0 160 120">
+            <path d="M20 80V60l8-20h104l8 20v20"/>
+            <path d="M20 80h120v20H20z"/>
+            <circle cx="45" cy="100" r="8"/>
+            <circle cx="115" cy="100" r="8"/>
+            <path d="M40 60h80"/>
+          </svg>
+        </div>
+        <div class="article-body">
+          <div class="article-cat">Car repair</div>
+          <h3 class="article-title">Car broke down with no savings — your exact options in 2026.</h3>
+          <p class="article-excerpt">Your mechanic quoted $1,800. Here's what saying no actually costs you — and the options most people never consider before panicking.</p>
+          <div class="article-meta">
+            <span>6 min read</span>
+            <span class="article-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="/resources/medical-bill-cannot-pay" class="article">
+        <div class="article-visual">
+          <svg class="bg" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <pattern id="p2" width="16" height="16" patternUnits="userSpaceOnUse">
+                <circle cx="8" cy="8" r="1" fill="#1f4a38" opacity="0.2"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="225" fill="url(#p2)"/>
+          </svg>
+          <svg class="art" viewBox="0 0 160 120">
+            <rect x="30" y="20" width="100" height="90" rx="4"/>
+            <path d="M45 45h70M45 60h70M45 75h50"/>
+            <circle cx="120" cy="85" r="14"/>
+            <path d="M120 78v14M113 85h14"/>
+          </svg>
+        </div>
+        <div class="article-body">
+          <div class="article-cat">Medical bills</div>
+          <h3 class="article-title">Unexpected medical bill you cannot pay — what happens if you ignore it.</h3>
+          <p class="article-excerpt">Medical debt goes to collections in 90 days. Here's what that costs you long-term and the negotiation options most patients never use.</p>
+          <div class="article-meta">
+            <span>8 min read</span>
+            <span class="article-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 3 -->
+      <a href="/resources/behind-on-rent-every-option" class="article">
+        <div class="article-visual">
+          <svg class="bg" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <pattern id="p3" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M0 20L20 0" stroke="#1f4a38" stroke-width="1" opacity="0.14"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="225" fill="url(#p3)"/>
+          </svg>
+          <svg class="art" viewBox="0 0 160 120">
+            <path d="M20 60L80 20l60 40"/>
+            <path d="M35 55v55h90V55"/>
+            <path d="M65 110V80h30v30"/>
+          </svg>
+        </div>
+        <div class="article-body">
+          <div class="article-cat">Housing</div>
+          <h3 class="article-title">Behind on rent with no way to catch up — every option available.</h3>
+          <p class="article-excerpt">The true cost of a late rent payment vs. a short-term loan — plus rental assistance programs most tenants don't know exist.</p>
+          <div class="article-meta">
+            <span>7 min read</span>
+            <span class="article-arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CTA BANNER ======================== -->
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2>Don't borrow <em>blindly.</em><br>See every option first.</h2>
+    <p>Free tool. 90 seconds. No credit check required to use the analyzer.</p>
+    <a href="#calculator" class="btn btn-on-accent">
+      Start my free analysis
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="brand" aria-label="EmergencyFundGuides home">
+          <span class="brand-mark" aria-hidden="true">e</span>
+          <span class="brand-name">EmergencyFund<span class="amp">·</span>Guides</span>
+        </a>
+        <p>Free guidance for Americans facing an unexpected financial emergency. We help you understand every option — not just loans.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Get help</h4>
+        <ul>
+          <li><a href="#calculator">Free analysis</a></li>
+          <li><a href="#calculator">Car repair</a></li>
+          <li><a href="#calculator">Medical bills</a></li>
+          <li><a href="#calculator">Rent & housing</a></li>
+          <li><a href="#calculator">Utility shutoff</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/resources">All guides</a></li>
+          <li><a href="/resources/emergency-loans">Emergency loans</a></li>
+          <li><a href="/resources/credit-help">Credit help</a></li>
+          <li><a href="/resources/state-programs">State programs</a></li>
+          <li><a href="/resources/debt-relief">Debt relief</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#privacy">Privacy policy</a></li>
+          <li><a href="#terms">Terms of service</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#disclosure">Advertiser disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal-block">
+      <div class="lbl">Important disclosures</div>
+      <p>
+        <strong>EmergencyFundGuides is not a lender</strong> and does not make credit decisions. We are a free financial guidance service that connects consumers with third-party lenders and financial service providers. Completing our analysis tool does not guarantee approval for any financial product. Loan availability, amounts, rates, and terms vary by lender, state, and individual eligibility. APR ranges vary by lender. By submitting your information you agree to our <a href="#terms">Terms</a> and <a href="#privacy">Privacy Policy</a> and consent to be contacted by us and our lending partners regarding financial options. This site may receive compensation from lenders when consumers are connected with them. Compensation may influence which products appear and in what order, but does not affect the accuracy of our guidance. Always review loan terms carefully before accepting any offer.
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 EmergencyFundGuides. All rights reserved.</span>
+      <span><a href="#privacy" style="color:var(--ink-3);text-decoration:none;margin-right:16px">Privacy</a><a href="#terms" style="color:var(--ink-3);text-decoration:none">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================== JAVASCRIPT ======================== -->
+<script>
+// =========================================================
+// STATE — preserved exactly from original
+// =========================================================
+const answers = {
+  situation: null,
+  urgency: null,
+  amount: null,
+  income: null,
+  credit: null,
+  resources: [],
+  employment: null,
+  state: null
+};
+
+let currentStep = 1;
+let preselected = null;
+
+const stepKeys = ['', 'situation', 'urgency', 'amount', 'income', 'credit', 'resources', 'employment', 'state'];
+
+// =========================================================
+// NAVIGATION
+// =========================================================
+function goToStep(n) {
+  const current = document.querySelector(`.calc-step[data-step="${currentStep}"]`);
+  const next = document.querySelector(`.calc-step[data-step="${n}"]`);
+  if (!current || !next) return;
+  current.classList.remove('active');
+  next.classList.add('active');
+  currentStep = n;
+  updateProgress();
+  const calcSection = document.getElementById('calculator')
+    || document.querySelector('.calc, [id*="calc"]');
+  if (calcSection) {
+    const y = calcSection.getBoundingClientRect().top + window.pageYOffset - 80;
+    if (y > 0) {
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }
+}
+
+function updateProgress() {
+  const pct = Math.round(((currentStep - 1) / 8) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('stepLabel').textContent = `Step ${currentStep} of 8`;
+  document.getElementById('stepPercent').textContent = pct + '% complete';
+}
+
+// =========================================================
+// OPTION SELECTION
+// =========================================================
+function selectOpt(btn, step, value) {
+  btn.closest('.opt-list').querySelectorAll('.opt').forEach(o => o.classList.remove('selected'));
+  btn.classList.add('selected');
+  answers[stepKeys[step]] = value;
+  const nextBtn = document.getElementById('next' + step);
+  if (nextBtn) nextBtn.disabled = false;
+  setTimeout(() => { if (step < 8) goToStep(step + 1); }, 300);
+}
+
+function toggleMulti(btn, step, value) {
+  btn.classList.toggle('selected');
+  const idx = answers.resources.indexOf(value);
+  if (idx > -1) answers.resources.splice(idx, 1);
+  else answers.resources.push(value);
+}
+
+function selectState(value) {
+  answers.state = value;
+  const nextBtn = document.getElementById('next8');
+  if (nextBtn) nextBtn.disabled = !value;
+}
+
+// =========================================================
+// LEAD SCORING — preserved exactly
+// =========================================================
+function scoreLeadTotal() {
+  let score = 0;
+  const creditScore = { good: 30, fair: 20, difficult: 8, none: 5, unsure: 10 };
+  score += creditScore[answers.credit] || 0;
+  const incomeScore = { under_1500: 5, '1500_2500': 12, '2500_4000': 20, '4000_6000': 25, over_6000: 25 };
+  score += incomeScore[answers.income] || 0;
+  const empScore = { fulltime: 20, parttime: 14, selfemployed: 12, gig: 10, benefits: 8, between_jobs: 2 };
+  score += empScore[answers.employment] || 0;
+  const urgScore = { today: 15, this_week: 12, this_month: 8, planning: 3 };
+  score += urgScore[answers.urgency] || 0;
+  if (answers.resources.includes('checking')) score += 5;
+  if (answers.resources.includes('employer') || answers.resources.includes('paycheck')) score += 5;
+  return score;
+}
+
+// =========================================================
+// RESULTS
+// =========================================================
+function showResults() {
+  document.querySelectorAll('.calc-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('progressWrap').style.display = 'none';
+  const resultsPanel = document.getElementById('results-panel');
+  resultsPanel.style.display = 'block';
+
+  const labels = {
+    situation: { car_repair:'Car repair', medical:'Medical bill', rent:'Behind on rent', utility:'Utility shutoff', income_loss:'Income loss', multiple:'Multiple issues', other:'Other' },
+    urgency: { today:'Today / tomorrow', this_week:'This week', this_month:'This month', planning:'Planning ahead' },
+    amount: { under_500:'Under $500', '500_1500':'$500–$1,500', '1500_3500':'$1,500–$3,500', '3500_7500':'$3,500–$7,500', '7500_15000':'$7,500–$15,000', over_15000:'$15,000+' },
+    credit: { good:'Good (680+)', fair:'Fair (580–679)', difficult:'Difficult (<580)', none:'No history', unsure:'Not sure' },
+    employment: { fulltime:'Full-time', parttime:'Part-time', selfemployed:'Self-employed', gig:'Gig work', benefits:'Benefits', between_jobs:'Between jobs' }
+  };
+
+  document.getElementById('summaryGrid').innerHTML = `
+    <div class="summary-item">
+      <span class="summary-label">Emergency</span>
+      <span class="summary-value">${labels.situation[answers.situation] || answers.situation || '—'}</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">Urgency</span>
+      <span class="summary-value">${labels.urgency[answers.urgency] || '—'}</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">Amount needed</span>
+      <span class="summary-value">${labels.amount[answers.amount] || '—'}</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">Credit range</span>
+      <span class="summary-value">${labels.credit[answers.credit] || '—'}</span>
+    </div>
+  `;
+
+  const score = scoreLeadTotal();
+  const opts = buildOptions(score);
+  document.getElementById('rankedOptions').innerHTML = opts;
+
+  if (score >= 55 && (answers.urgency === 'today' || answers.urgency === 'this_week')) {
+    document.getElementById('callButtonWrap').classList.add('visible');
+  }
+}
+
+function buildOptions(score) {
+  let html = '';
+  const isUrgent = answers.urgency === 'today' || answers.urgency === 'this_week';
+  const hasCreditCard = answers.resources.includes('credit_card');
+  const hasHome = answers.resources.includes('home');
+  const hasCar = answers.resources.includes('car');
+  const hasEmployer = answers.resources.includes('employer') || answers.resources.includes('paycheck');
+  const goodCredit = answers.credit === 'good';
+  const fairCredit = answers.credit === 'fair';
+  let opts = [];
+
+  if (hasCreditCard && (answers.amount === 'under_500' || answers.amount === '500_1500')) {
+    opts.push({ top: true, title: 'Use your existing credit card', desc: 'You have a credit card with available balance. For amounts under $1,500 this is often your fastest and cheapest option — no application, no approval needed, available today.' });
+  }
+  if (hasEmployer && isUrgent && (answers.amount === 'under_500' || answers.amount === '500_1500')) {
+    opts.push({ top: opts.length === 0, title: 'Ask your employer for a pay advance', desc: 'Many employers offer emergency pay advances that most employees never ask for. Zero interest. One conversation with HR could resolve this today.' });
+  }
+  if (goodCredit || fairCredit) {
+    opts.push({ top: opts.length === 0, title: 'Personal installment loan', desc: 'Based on your income and credit range, you likely qualify for a personal installment loan. Fixed monthly payments — not payday loans. Funds often available within 24 hours of approval.' });
+  } else {
+    opts.push({ top: opts.length === 0, title: 'Bad-credit personal loan', desc: 'Specialist lenders work with scores below 580. Income and employment matter more than credit score for these products. Approval rates are higher than you might expect.' });
+  }
+  if (hasHome) {
+    opts.push({ top: false, title: 'Home equity option (HELOC)', desc: 'Because you own a home, you may have access to a home equity line of credit at significantly lower interest rates than personal loans. Best for larger amounts.' });
+  }
+  if (hasCar) {
+    opts.push({ top: false, title: 'Car title loan option', desc: 'Your vehicle is an asset. Title loans use your car as collateral for quick access to funds. Rates are higher but approval is fast and credit score matters less.' });
+  }
+  opts.push({ top: false, title: 'State & federal assistance programs', desc: `${answers.state || 'Your state'} has emergency assistance programs for utility bills, rent, and basic needs. Many people don't know these exist. A complete list will be included in your email plan — free and no repayment required.` });
+
+  opts.forEach(o => {
+    html += `
+      <div class="result-option ${o.top ? 'top' : ''}">
+        <div class="result-opt-title">${o.title}</div>
+        <div class="result-opt-desc">${o.desc}</div>
+      </div>`;
+  });
+  return html;
+}
+
+// =========================================================
+// EMAIL SUBMISSION
+// =========================================================
+function checkSubmit() { /* reserved for live validation */ }
+
+function submitLead() {
+  const firstName = document.getElementById('firstName').value.trim();
+  const email = document.getElementById('emailInput').value.trim();
+  const tcpa = document.getElementById('tcpaCheck').checked;
+
+  if (!email || !tcpa) {
+    if (!email) {
+      const inp = document.getElementById('emailInput');
+      inp.style.borderColor = '#e07a5f';
+      inp.focus();
+    }
+    if (!tcpa) alert('Please agree to the terms to receive your free plan.');
+    return;
+  }
+
+  // Production hook:
+  // const payload = { ...answers, firstName, email, phone: document.getElementById('phoneInput').value, score: scoreLeadTotal() };
+  // fetch('/api/submit', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+
+  document.getElementById('results-panel').style.display = 'none';
+  const successPanel = document.getElementById('success-panel');
+  successPanel.style.display = 'block';
+  document.getElementById('progressWrap').style.display = 'none';
+
+  // Only scroll if success panel is not already comfortably in view
+  const rect = successPanel.getBoundingClientRect();
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  const inView = rect.top >= 0 && rect.top < vh * 0.6;
+  if (!inView) {
+    const y = rect.top + window.pageYOffset - 100;
+    if (y > 0) window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+}
+
+function trackCall() {
+  console.log('Call initiated', answers);
+}
+
+// =========================================================
+// PRESELECT FROM HERO / SITUATION CARDS
+// =========================================================
+function preselectSituation(type) {
+  const map = { car:'car_repair', medical:'medical', rent:'rent', utility:'utility', job:'income_loss', other:'multiple' };
+  preselected = map[type];
+  setTimeout(() => {
+    if (!preselected) return;
+    document.querySelectorAll('.calc-step[data-step="1"] .opt').forEach(btn => {
+      if (btn.getAttribute('onclick')?.includes("'" + preselected + "'")) {
+        btn.click();
+      }
+    });
+  }, 420);
+}
+
+// =========================================================
+// MOBILE NAV
+// =========================================================
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const open = menu.classList.toggle('open');
+  document.getElementById('hamburger').setAttribute('aria-expanded', String(open));
+}
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('mobileMenu');
+  const h = document.getElementById('hamburger');
+  if (!menu || !h) return;
+  if (menu.classList.contains('open') && !menu.contains(e.target) && !h.contains(e.target)) {
+    menu.classList.remove('open');
+    h.setAttribute('aria-expanded', 'false');
+  }
+});
+
+// =========================================================
+// SCROLLED HEADER + REVEAL + INIT
+// =========================================================
+document.addEventListener('DOMContentLoaded', () => {
+  updateProgress();
+
+  // Header shadow on scroll
+  const hdr = document.getElementById('siteHeader');
+  const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 12);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Smooth scroll for anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (!id || id === '#') return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    });
+  });
+
+  // Reveal on scroll (subtle)
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.classList.add('in');
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal, .hiw-card, .article, .stat, .sit-card').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+});
+</script>
+
+</body>
+</html>
